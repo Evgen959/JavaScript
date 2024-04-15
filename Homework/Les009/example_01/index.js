@@ -1,36 +1,68 @@
-// #1 Преобразуйте следующие значения к строке или числу или логическому значению и выведите в консоль результат, пример: console.log('-17.17 to string is ' + String(-17.17));
+//  Задание 1.
+// Объявить массив из 10 элементов и заполнить его случайными числами от 1 до 100. Найти максимальное и минимальное значение в массиве. Вывести в консоль.
 
+console.log("-----Задание 1------");
+const array = [];
+for (let i = 1;  i <= 10; i ++) {
+    let a = Math.round(Math.random() * 100);
+    array.push(a);
+}
+console.log(array);
+console.log("min", Math.min.apply(null, array));
+console.log("max", Math.max.apply(null, array));
 
-/* to string */
-console.log('----- to string -----');
-console.log('17 to string is ' + String(17));
-console.log('-17.17 to string is ' + String(-17.17));
-console.log('false to string is ' + String(false));
-console.log('null to string is ' + String(null));
-console.log('undefined to string is ' + String(undefined));
-console.log('0 to string is ' + String(0));
+// Задание 2.
+// Объявить массив из 10 любых элементов, заполнить. Вырезать первый элемент и добавить его в конец массива.
 
+console.log("-----Задание 2------");
+const arrayA = array;
+arrayA.push(array[0]);
+arrayA.shift(arrayA[0]);
+console.log(arrayA);
 
-/* to number */
-console.log('----- to number -----');
-console.log("'17' to number is " + Number('17'));
-console.log('true to number is ' + Number(true));
-console.log('false to number is ' + Number(false));
-console.log('null to number is ' + Number(null));
-console.log('undefined to number is ' + Number(undefined));
-console.log("'   20   ' to number is " + Number('  20   '));
-console.log("'      ' to number is " + Number('    '));
-console.log("'   30d   ' to number is " + Number('   30d    '));
+// Задание 3.
+// Объявить массив из 10 элементов и заполнить его случайными числами от 1 до 75. Найти минимальное и максимальное значение в массиве. Вывести в консоль их сумму.
 
-/* to boolean */
-console.log('----- to bolean -----');
-console.log('null to boolean is ' + Boolean(null));
-console.log('undefined to boolean is ' + Boolean(undefined));
-console.log('0 to boolean is ' + Boolean(0));
-console.log('-0 to boolean is ' + Boolean(-0));
-console.log('NaN to boolean is ' + Boolean(NaN));
-console.log("'' to boolean is " + Boolean(''));
-console.log("' ' to boolean is " + Boolean(' '));
-console.log('17 to boolean is ' + Boolean(17));
-console.log("'Hello' to boolean is " + Boolean('Hello'));
+console.log("-----Задание 3------");
+const arrayB = [];
+for (let i = 1;  i <= 10; i ++) {
+    let a = Math.round(Math.random() * (75 - 1) + 1);
+    arrayB.push(a);
+}
+console.log(arrayB);
+console.log("min", Math.min.apply(null, arrayB));
+console.log("max", Math.max.apply(null, arrayB));
+console.log("∑", Math.min.apply(null, arrayB) + Math.max.apply(null, arrayB));
 
+// Задание 4.
+// Объявить массив из 10 элементов и заполнить его случайными числами от 1 до 50. Найти сумму всех элементов массива. Вывести в консоль.
+
+console.log("-----Задание 4------");
+const arrayC = [];
+let b = 0;
+for (let i = 1;  i <= 10; i ++) {
+    let a = Math.round(Math.random() * (50 - 1) + 1);
+    arrayC.push(a);    
+    b = b + a;
+}
+console.log(arrayC);
+console.log("∑", b);
+
+// Задание 5 (необязательное).
+// Объявить массив из 5 элементов и заполнить его любыми числами. Присвоить 5 переменным значения из массива с помощью деструктуризации.
+
+console.log("-----Задание 5------");
+var arrayD = [76, 39, -35, 82, 13];
+var [c, d, f, g, h] = arrayD;
+console.log(c, d, f, g, h);
+
+// Задание 6.
+// Разбить строку "Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота."
+// на слова и вывести в консоль по одному слову в строке. 
+
+console.log("-----Задание 6------");
+let str = 'Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота.';
+let arrayOfWords = str.split(' ');
+    for (let i = 0;  i <= 6; i ++) {
+        console.log(arrayOfWords[i]);
+}
