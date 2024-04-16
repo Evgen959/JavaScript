@@ -8,16 +8,23 @@ for (let i = 1;  i <= 10; i ++) {
     array.push(a);
 }
 console.log(array);
-console.log("min", Math.min.apply(null, array));
-console.log("max", Math.max.apply(null, array));
+console.log(...array);
+console.log("min", Math.min(...array));
+console.log("max", Math.max(...array));
+// console.log("min", Math.min.apply(null, array));
+// console.log("max", Math.max.apply(null, array));
 
 // Задание 2.
 // Объявить массив из 10 любых элементов, заполнить. Вырезать первый элемент и добавить его в конец массива.
 
 console.log("-----Задание 2------");
-const arrayA = array;
-arrayA.push(array[0]);
-arrayA.shift(arrayA[0]);
+//const arrayA = array;
+
+//const arrayA = [].concat(array);
+const arrayA = [...array]; // дублирование массива
+console.log(arrayA);
+const l = arrayA.shift(arrayA[0]); // возвращает удаленный элемент 
+arrayA.push(l);
 console.log(arrayA);
 
 // Задание 3.
@@ -57,12 +64,11 @@ var [c, d, f, g, h] = arrayD;
 console.log(c, d, f, g, h);
 
 // Задание 6.
-// Разбить строку "Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота."
-// на слова и вывести в консоль по одному слову в строке. 
+// Разбить строку "Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота." на слова и вывести в консоль по одному слову в строке. 
 
 console.log("-----Задание 6------");
 let str = 'Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота.';
-let arrayOfWords = str.split(' ');
+let arrayOfWords = str.split(" ");
     for (let i = 0;  i <= 6; i ++) {
         console.log(arrayOfWords[i]);
 }
