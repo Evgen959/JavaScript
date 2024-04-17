@@ -55,10 +55,37 @@ console.log(sumEvenNamber(3.9, 10));
 // Первая функция не должна быть колбеком, просто рядом лежать, или даже внутри второй функции. На ваш выбор.
 
 console.log("-----Задание 4------");
-function primeNamberInBetween(s) {
+//function primeNamberInBetween(s) {
+const primeNamberInBetween =(s) => {
     
-    const primeNamber = f => f % f === 0 && f !==1? true: false;
+    // function primeNamber (f) {
+    //     if (f > 1 ) {
+    //         for (let i = 2; i <= Math.sqrt(f); i++) {
+    //             if (f % i === 0 ) {
+    //             return false;
+    //             }               
+    //         }
+    //         return true;
+    //     }
+    // return false;
+    // }
     
+    //const primeNamber = f => f % f === 0 && f !==1 && f % 2 !==0? true: false;
+
+    const primeNamber = f => {
+        if (f > 1 ) {
+            for (let i = 2; i <= Math.sqrt(f); i++) {
+                if (f % i === 0 ) {
+                return false;
+                }               
+            }
+            return true;
+        }
+    return false;
+    }
+
+
+        
     const array = [];
     for (let i = 1; i <= Math.floor(s); i++) {
         if (primeNamber(i) === true ) {
@@ -67,6 +94,6 @@ function primeNamberInBetween(s) {
     }  
     return array;  
 }
-console.log(primeNamberInBetween(40));
+console.log(primeNamberInBetween(100));
 
 

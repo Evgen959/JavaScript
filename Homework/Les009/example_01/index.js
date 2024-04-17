@@ -68,7 +68,10 @@ console.log(c, d, f, g, h);
 
 console.log("-----Задание 6------");
 let str = 'Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота.';
-let arrayOfWords = str.split(" ");
-    for (let i = 0;  i <= 6; i ++) {
-        console.log(arrayOfWords[i]);
-}
+let strA = str.replaceAll(/([,.:!])/g, ''); // убераем знаки припенания
+let arrayOfWords = strA.split(" ");
+     for (let i = 0;  i <= 6; i ++) {
+         console.log(arrayOfWords[i]);
+    }
+
+
