@@ -1,0 +1,51 @@
+<!-- Создать форму, у которой 2 поля, и 1 кнопка. Поля предусматривают ввод роста и веса человека, кнопка - отправку данных.
+
+Также предусмотреть блок, в который будет выводиться результат расчета индекса массы тела (BMI), и второй блок - результат, который будет говорить о том, соответствует ли индекс массы тела норме. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <h1>Расчет Индекса Массы Тела (ИМТ)</h1>
+    
+    <table>      
+        <tr>
+            <td><label for="height">Введите Ваш рост:</label></td>
+            <td><input type="number" id="height" placeholder="см" required></td>
+
+
+        </tr>
+        
+        <tr>
+            <td><label for="weight">Введите Ваш вес:</label></td>
+            <td><input type="number" id="weight" placeholder="кг" required></td>
+        </tr>
+    </table>
+
+    <button type="submit" id='resultButton'>Рассчитать</button>
+    
+    <table>
+               
+        <tr>
+            <td>Индекс массы тела:</td>
+            <td><output type="number" id="index"></output></td>
+        </tr>
+        <tr>
+            <td>Соответствие ИМТ норме:</td>
+            <td><output type="text" id="trueFalse"></output></td>
+        </tr>               
+    </table>
+
+
+
+
+
+    
+</body>
+</html>

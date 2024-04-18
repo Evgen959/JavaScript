@@ -36,14 +36,32 @@ console.log('------ №3 ------');
 // Пример работы функции: { a: 'a', '36.6': 36.6, 'John Doe': 'John Doe' } ==> 'a, 36.6, John Doe'
 
 function objectInString (objectB) {
-    const arrOfObject = Object.entries(objectB);
-    const string = " ";
-    // console.log(arrOfObject);
+    const arrOfObject = Object.values(objectB);
+    let string1 = "";
+    console.log(arrOfObject);
     for (let i = 0; i < arrOfObject.length; i++) {
-    // string = arrOfObject[i][1];
+        // if (i === arrOfObject.length - 1) {
+        //     string1 = string1 + arrOfObject[i];
+        //   //  string1 = `${string1}${arrOfObject[i]}`;
+
+        // } 
+        // else {
+        //     string1 = string1 + arrOfObject[i] + ", ";
+        //   //  string1 = `${string1}${arrOfObject[i]}, `;
+        // }
+        
+        //     // сокрощение
+        //    string1 = (i === arrOfObject.length - 1)
+        //     ? `${string1}${arrOfObject[i]}`
+        //     : `${string1}${arrOfObject[i]}, `;
+
+        // сокрощение
+        string1 = `${string1}${arrOfObject[i]}${(i === arrOfObject.length - 1) ? '' : ', '}`
+
+    
     
     }
-    return string;
+    return string1;
 }
 const objectF = {
     a: 'a', 
@@ -56,12 +74,34 @@ console.log(objectInString(objectF));
 console.log('------ №4 ------');
 //№4 Напишите функцию, которая принимает объект и возвращает другой обьект, который содержит все свойства исходного обьетка, но значения свойств - это их типы.
 // Пример: { a: 'a', '36.6': 36.6, 'John Doe': 'John Doe' } ==> { a: 'string', '36.6': 'number', 'John Doe': 'string' }
+// function objectInObject (objectE) {
+//     const arrOfObject = Object.entries(objectE);
+//     const objectENew = {};
+//     console.log(arrOfObject);
+//     for (let i = 0; i < arrOfObject.length; i++) {
+//         objectENew[arrOfObject[i][0]] = typeof arrOfObject[i][1];
+    
+//     }
+//     return objectENew;
+// }
+// const objectW = {
+//     a: 'a', 
+//     '36.6': 36.6, 
+//     'John Doe': 'John Doe'
+// }
+// console.log(objectInObject(objectW));
+
+
+console.log('------ №4* ------');
+//№4* Напишите функцию, которая принимает объект и возвращает другой более сложный обьект, который содержит все свойства исходного обьетка, но значения свойств - это объект содержащий исходное значение, и его тип.
+// Пример: { a: 'a', '36.6': 36.6, 'John Doe': 'John Doe' } ==> { a: { value: 'a', type: 'string' }, '36.6': { value: 36.6, type: 'number' }, 'John Doe': { value: 'John Doe', type: 'string' } }
+
 function objectInObject (objectE) {
     const arrOfObject = Object.entries(objectE);
     const objectENew = {};
     console.log(arrOfObject);
     for (let i = 0; i < arrOfObject.length; i++) {
-        objectENew[arrOfObject[i][0]] = typeof arrOfObject[i][1];
+        objectENew[arrOfObject[i][0]] = {value: arrOfObject[i][1], type: typeof arrOfObject[i][1]};
     
     }
     return objectENew;
@@ -72,12 +112,6 @@ const objectW = {
     'John Doe': 'John Doe'
 }
 console.log(objectInObject(objectW));
-
-
-console.log('------ №4* ------');
-//№4* Напишите функцию, которая принимает объект и возвращает другой более сложный обьект, который содержит все свойства исходного обьетка, но значения свойств - это объект содержащий исходное значение, и его тип.
-// Пример: { a: 'a', '36.6': 36.6, 'John Doe': 'John Doe' } ==> { a: { value: 'a', type: 'string' }, '36.6': { value: 36.6, type: 'number' }, 'John Doe': { value: 'John Doe', type: 'string' } }
-
 
 
 
