@@ -10,7 +10,7 @@ getResultButton.addEventListener('click', showResult);
 
 
 function showResult() {
-    // alert("Test")
+    alert("Test")
     let resultOfAdding;
     let resulTrueFalse;
     resultOfAdding = weightInput.value / Math.pow(heightInput.value / 100, 2);
