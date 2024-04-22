@@ -21,10 +21,11 @@ let players = [
     ];
 
 
-const ff = (element) => {
-    console.log(element);
-    return element + (element.goals = 8);
+const ff = (object) => {
+    console.log(object);
+    return object.goals = 8;
 }
 let playersNew = players.map(ff);
+console.log('--------------------');
 players.forEach(ff);
 console.log(playersNew);

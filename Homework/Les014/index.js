@@ -1,5 +1,6 @@
 console.log('------- №1 ------');
-// 1. Надо добавить каждому игроку ключ(свойство) 'goals' и туда записать случайное целое число от 0 до 20. При этом должен быть сформирован новый массив.
+// 1. Надо добавить каждому игроку ключ(свойство) 'goals' и туда записать 
+// случайное целое число от 0 до 20. При этом должен быть сформирован новый массив.
 
 
 const players = [
@@ -23,13 +24,16 @@ const playerscopy = [...players];
 
 const ff = (objectA) => {
     console.log(objectA);
-    return objectA + (objectA.goals = Math.round(Math.random() * (20 - 1) + 1));
-}
+    objectA.goals = Math.round(Math.random() * (20 - 1) + 1);
+    return objectA;
+    }
 const playersNew = playerscopy.map(ff);
 console.log(playersNew);
 
+
 console.log('------- №2 ------');
-// 2. Отфильтровать и вывести в консоль всех игроков, у которых рост выше или равен 180 и вес ниже 80.
+// 2. Отфильтровать и вывести в консоль всех игроков, у которых рост выше или 
+// равен 180 и вес ниже 80.
 const callbackForFilter = (objectB) => {
     return (objectB.height >= 180 && objectB.weight < 80) ? true: false;
 }
@@ -40,9 +44,8 @@ console.log(playersFilter);
 console.log('------- №3 ------');
 // 3. Отсортировать игроков по количеству забитых голов.
 const playersSort = (object1, object2) => {
-    return object1.height < object2.height ? -1: 1;
+    return object1.goals < object2.goals ? -1: 1;
 }
-
-console.log(playerscopy.sort(playersSort));
+console.log(playersNew.sort(playersSort));
 
 
