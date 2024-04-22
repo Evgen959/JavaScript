@@ -63,7 +63,7 @@ const sallBackForSort = (a, b) => {
 }
 const arrFcopy = [...arrF];  // доелаем копию!!!!! массива
 console.log(arrFcopy.sort(sallBackForSort)); // сортирует массив и !!!!!!!возвращает 
-// исходный!!!!!! массив уже отсортированый
+//исходный!!!!!! массив уже отсортированый
 
 // классная работа: отсортировать массив из играков по росту "height"
 const sallBackForSortC = (object1, object2) => {
