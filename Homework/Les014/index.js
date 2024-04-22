@@ -41,6 +41,8 @@ const playersFilter = playerscopy.filter(callbackForFilter);
 console.log(playersFilter);
 
 
+
+
 console.log('------- №3 ------');
 // 3. Отсортировать игроков по количеству забитых голов.
 const playersSort = (object1, object2) => {
