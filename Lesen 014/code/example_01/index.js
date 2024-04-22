@@ -1,5 +1,6 @@
 // forEach
-// const ff = (a, b, c) => {    // a - элемент массива b - индекс элемента c - весь массив
+// const ff = (a, b, c) => {    // a - элемент массива b - индекс элемента 
+// c - весь массив
 //     console.log(`${a} + ${b} + ${c}`);
 // }
 const arrF = [1, 2, 3, 5, 4, 10, 6];
@@ -14,7 +15,8 @@ const ff = (a) => {
     arrayA.push(a + 3); // пушим в пустой массив
 }
 
-arrF.forEach(ff); // запускает функцию для каждого элемента массива столько раз сколько элементов массива
+arrF.forEach(ff); // запускает функцию для каждого элемента массива столько раз сколько
+// элементов массива
 
 // map !!!
 const callbackForMap = (element) => {
@@ -38,11 +40,13 @@ const callbackForFilter = (element) => {
     // }
     return element > 4 ? true: false;
 }
-const arrayAFilter = arrF.filter(callbackForFilter); // возвращает новый массив отфильтрованный по заданым пораметрам
+const arrayAFilter = arrF.filter(callbackForFilter); // возвращает новый массив 
+// отфильтрованный по заданым пораметрам
 console.log(arrayAFilter);
 
 // slice
-const arrayASliceResult = arrF.slice(0, 2); // возвращает новый массив, обрезает масив до указанного диопазона (указывающий элемент на конец диопазона не входит в него)
+const arrayASliceResult = arrF.slice(0, 2); // возвращает новый массив, обрезает масив 
+// до указанного диопазона (указывающий элемент на конец диопазона не входит в него)
 // console.log(arrayASliceResult);
 
 // sort
@@ -58,7 +62,8 @@ const sallBackForSort = (a, b) => {
     return b - a
 }
 const arrFcopy = [...arrF];  // доелаем копию!!!!! массива
-console.log(arrFcopy.sort(sallBackForSort)); // сортирует массив и !!!!!!!возвращает исходный!!!!!! массив уже отсортированый
+console.log(arrFcopy.sort(sallBackForSort)); // сортирует массив и !!!!!!!возвращает 
+// исходный!!!!!! массив уже отсортированый
 
 // классная работа: отсортировать массив из играков по росту "height"
 const sallBackForSortC = (object1, object2) => {
