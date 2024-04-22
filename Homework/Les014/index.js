@@ -19,13 +19,13 @@ const players = [
     {name: "Paul", height: 174, weight: 69, sport: "hockey"},
     {name: "Roman", height: 184, weight: 78, sport: "football"}
     ];
-
+const playerscopy = [...players];
 
 const ff = (objectA) => {
     console.log(objectA);
     return objectA + (objectA.goals = Math.round(Math.random() * (20 - 1) + 1));
 }
-const playersNew = players.map(ff);
+const playersNew = playerscopy.map(ff);
 console.log(playersNew);
 
 console.log('------- №2 ------');
@@ -33,7 +33,7 @@ console.log('------- №2 ------');
 const callbackForFilter = (objectB) => {
     return (objectB.height >= 180 && objectB.weight < 80) ? true: false;
 }
-const playersFilter = players.filter(callbackForFilter);
+const playersFilter = playerscopy.filter(callbackForFilter);
 console.log(playersFilter);
 
 
@@ -42,6 +42,7 @@ console.log('------- №3 ------');
 const playersSort = (object1, object2) => {
     return object1.height < object2.height ? -1: 1;
 }
-console.log(players.sort(playersSort));
+
+console.log(playerscopy.sort(playersSort));
 
 
