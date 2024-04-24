@@ -24,7 +24,7 @@ const playerscopy = [...players];
 
 const ff = (objectA) => {
     console.log(objectA);
-    objectA.goals = Math.round(Math.random() * (20 - 1) + 1);
+    objectA.goals = Math.round(Math.random() * 21);
     return objectA;
     }
 const playersNew = playerscopy.map(ff);
