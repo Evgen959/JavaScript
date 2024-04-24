@@ -49,7 +49,8 @@ if ("mama" in andrey){
 console.log(Object.keys(andrey));
 
 console.log("получаем значения ключей и выводим в консоль");
-// получаем ключи массива, проходим циклом по массиву ключей и получаем значения ключей и выводим в консоль
+// получаем ключи массива, проходим циклом по массиву ключей 
+// и получаем значения ключей и выводим в консоль
 const array = Object.keys(andrey);
 for (let i = 0; i < array.length; i++) {
     console.log(andrey[array[i]]);
@@ -66,8 +67,8 @@ console.log(Object.entries(andrey));
 console.log("классная работа");
 // классная работа:
 // создаю массив из нашего обьета
-// сделайте из этого массива обратно обьект
 const arrOfObject = Object.entries(andrey);
+// сделайте из этого массива обратно обьект
 const andreyNew = {};
 console.log(andreyNew);
 for (let i = 0; i < arrOfObject.length; i++) {
