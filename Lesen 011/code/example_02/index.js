@@ -70,7 +70,7 @@ console.log("классная работа");
 const arrOfObject = Object.entries(andrey);
 // сделайте из этого массива обратно обьект
 const andreyNew = {};
-console.log(andreyNew);
+console.log(arrOfObject);
 for (let i = 0; i < arrOfObject.length; i++) {
     andreyNew[arrOfObject[i][0]] = arrOfObject[i][1];
     

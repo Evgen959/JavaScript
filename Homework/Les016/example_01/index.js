@@ -46,7 +46,23 @@ console.log('------ №4 -------');
 
 // [{name: 'William', age: 54, id: 'customer-id-1’}, {name: 'Tom', age: 17, 
 // id: 'customer-id-2'}]
-
+const objectA = {
+    'customer-id-1': {
+        name: 'William',
+        age: 54
+    },
+    'customer-id-2': {
+        name: 'Tоm',
+        age: 17
+    }
+}
+const objectInArray = Object.entries(objectA); 
+console.log(objectInArray);
+const arrayB = (arr) => {
+    return // arr.arra[1] ? ;
+}
+const objectInArrayEnd = objectInArray.map(arrayB);
+console.log(objectInArrayEnd);
 
 
 console.log('------ №5 -------');
@@ -72,5 +88,24 @@ console.log('------ №5 -------');
 //   key7: 'value7'
 // };
 
+const object1 = {
+      key1: 'value1',
+      key2: 'value2',
+      key3: 'value3',
+      key4: 'value4',
+      key5: 'value5'
+    };
+const object2 = {
+      key3: 'new_value3',
+      key4: 'new_value4',
+      key5: 'new_value5',
+      key6: 'value6',
+      key7: 'value7'
+    };
+
+    const array = Object.keys(object1);
+    for (let i = 0; i < array.length; i++) {
+        console.log(object1[array[i]]);
+    }
 
 

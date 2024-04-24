@@ -1,4 +1,4 @@
-const todo = [
+let todo = [
     {"task": "Купить продукты", "date": "2024-04-22", "done": true, "delete": false},
     {"task": "Позвонить другу", "date": "2024-04-23", "done": false, "delete": true},
     {"task": "Посетить врача", "date": "2024-04-24", "done": false, "delete": false},
