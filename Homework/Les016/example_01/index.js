@@ -3,9 +3,11 @@ console.log('------ №1 -------');
 // массив имен, начинающихся на букву "а" (большую или маленькую).
 const arrayName = ["Владимер", "Артур", "Сергей", "Лев", "Анна", "Олександр", 
 "Катерина", "Ольга", "Андрей"];
-const arrayNameFiltr = (string) => {
-    return string == 'A' ? string : false;
-}
+const arrayNameFiltr = string => string[0].toUpperCase() === 'А';
+// const arrayNameFiltr = (string) => {
+//     // console.log(string[0]);
+//     return (string[0] === 'А' || string[0] === 'а');
+// }
 const arrayNameFiltrA = arrayName.filter(arrayNameFiltr);
 console.log(arrayNameFiltrA);
 
@@ -57,9 +59,11 @@ const objectA = {
     }
 }
 const objectInArray = Object.entries(objectA); 
-console.log(objectInArray);
+// console.log(objectInArray);
 const arrayB = (arr) => {
-    return // arr.arra[1] ? ;
+    return {...arr[1], id: arr[0]};
+    // arr[1].id = arr[0];
+    // return arr[1];
 }
 const objectInArrayEnd = objectInArray.map(arrayB);
 console.log(objectInArrayEnd);
@@ -103,9 +107,10 @@ const object2 = {
       key7: 'value7'
     };
 
-    const array = Object.keys(object1);
-    for (let i = 0; i < array.length; i++) {
-        console.log(object1[array[i]]);
-    }
+const objectNew = (obj1, obj2) => {
+    return {...obj1, ...obj2};
+}
+console.log(objectNew(object1, object2));
+
 
 
