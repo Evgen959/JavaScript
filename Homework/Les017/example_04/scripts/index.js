@@ -32,10 +32,3 @@ const start = () => {
 getButton.addEventListener('click', start);
 
 
-
-
-
-//  
-// clearInterval(intervalID);
-// console.log('После запуска функции setInterval');
-
