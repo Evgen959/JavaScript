@@ -29,11 +29,15 @@ function recordNewcity(){
         function dataWork(data){
             if (data.location.name) {
                     
+                
+                
+                
                 // Дата
                 let getData = new Date(data.current.last_updated)
                 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
                 const day = days[getData.getDay()-1]
-                const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+                const monthNames = ["January", "February", "March", "April", "May", 
+                "June", "July", "August", "September", "October", "November", "December"]
                 const month = monthNames[getData.getMonth()];
   
                 let dateHeaderDiv = document.querySelector("#date");  // Находим элемент с id date
@@ -58,16 +62,16 @@ function recordNewcity(){
                 let currentTempC = document.querySelector("#temp")  // Находим элемент с id
                 currentTempC.innerText = data.current.temp_c + "°";  // отрправляем в HTML
                 
-                // // Скорость и направление ветра
-                // let wind = document.querySelector("#wind")  // Находим элемент с id
-                // wind.innerText = "(" + data.current.wind_dir + ")  " + data.current.wind_kph + "km/h";  // отрправляем в HTML
+                // Скорость и направление ветра
+                let wind = document.querySelector("#wind")  // Находим элемент с id
+                wind.innerText = "(" + data.current.wind_dir + ")  " + data.current.wind_kph + "km/h";  // отрправляем в HTML
 
-                // // Влажность
-                // let humidity = document.querySelector("#humidit")  // Находим элемент с id
-                // humidity.innerText = data.current.humidity + "%";  // отрправляем в HTML
+                // Влажность
+                let humidity = document.querySelector("#humidit")  // Находим элемент с id
+                humidity.innerText = data.current.humidity + "%";  // отрправляем в HTML
 
-                // let pressure_mb = document.querySelector("#pressure_mb")  // Находим элемент с id
-                // pressure_mb.innerText = data.current.pressure_mb + "mmHg";  // отрправляем в HTML
+                let pressure_mb = document.querySelector("#pressure_mb")  // Находим элемент с id
+                pressure_mb.innerText = data.current.pressure_mb + "mmHg";  // отрправляем в HTML
 
                 
             } else {
