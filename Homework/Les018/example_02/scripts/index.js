@@ -1,16 +1,28 @@
-let todo = [
-    {"task": "Купить продукты", "date": "2024-04-22", "done": true, "delete": false},
-    {"task": "Позвонить другу", "date": "2024-04-23", "done": false, "delete": true},
-    {"task": "Посетить врача", "date": "2024-04-24", "done": false, "delete": false},
-    {"task": "Заплатить за квартиру", "date": "2024-04-25", "done": true, "delete": false},
-    {"task": "Подготовить отчет", "date": "2024-04-26", "done": false, "delete": false},
-    {"task": "Починить автомобиль", "date": "2024-04-27", "done": true, "delete": false},
-    {"task": "Посадить цветы", "date": "2024-04-28", "done": false, "delete": false},
-    {"task": "Прочитать книгу", "date": "2024-04-29", "done": true, "delete": false},
-    {"task": "Сходить в спортзал", "date": "2024-04-30", "done": false, "delete": false},
-    {"task": "Приготовить ужин", "date": "2024-05-01", "done": true, "delete": false}
-]
+let todo;
 
+const fetchResult = fetch('https://jsonplaceholder.typicode.com/todos');
+console.log(fetchResult);
+
+fetchResult
+    .then((response) => {return response.json()})
+    .then((date) => { objectInArray(date.slice(0, 10))})
+
+const objectInArray = (arrayObject) => {
+    
+   const array = (arrObj) => {  
+    arrObj.task = arrObj.title; // замена ключа объекта на другой
+    delete arrObj.title;        // удаление старого ключа
+    arrObj.done = arrObj.completed;
+    delete arrObj.completed;
+    arrObj.delete = false;      // добавление ключа с данными 
+    arrObj.date = "2024-04-22"; // добавляем дату
+    return arrObj;
+    }
+    todo = arrayObject.map(array); // запускаем функцю для преобразования 
+                                   // пришлого массива до нужной формы
+    console.log(todo);      // запускаем функцию которая использует массив todu
+    pusharrayA();
+}
 
 const fieldInput = document.querySelector('#input-field');
 const fieldOutput = document.querySelector('#outputField');
@@ -48,12 +60,13 @@ const ff = (object) => {
 } 
 
 const pusharrayA = () =>{
+    // console.log(todo);
     const arrayToDo = todo.map(ff);
     fieldOutput.innerHTML = '';
     fieldOutput.append(...arrayToDo);
-    console.log(todo);
+    
 }
-pusharrayA();
+// pusharrayA();
 
 
 getResultButton.addEventListener('click', showResult); // кнопа добавления дел

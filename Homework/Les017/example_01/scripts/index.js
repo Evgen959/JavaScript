@@ -7,27 +7,30 @@
 // таймер при этом должен остановиться.
 
 
-
 const numberInput = document.querySelector('input');
 const getButton = document.querySelector('Button');
 const spanElement = document.querySelector('span');
-let counter = 10;
+const txteOutput = document.querySelector('div');
+let counter;
+const txte = 'Время вышло';
+// const setIntervalTime = Date.now();
 
-const setIntervalTime = Date.now();
 
-const timeHeandler = () => {
+const start = () => {
+    txteOutput.innerText = '';
+    counter = numberInput.value;
+    console.log(counter);
+    const timeHeandler = () => {
         if (counter >= 0) {
             spanElement.innerText = counter;
             counter--;
         } else {
+            spanElement.innerText = '';
             clearInterval(intervalID);
+            txteOutput.innerText = txte;
         }  
     }
-const intervalID = setInterval(timeHeandler, 2000);
-const start = () => {
-    counter = numberInput.value;
-    console.log(counter);
-    setInterval(timeHeandler, 2000);    
+    const intervalID = setInterval(timeHeandler, 1000); 
 }
 getButton.addEventListener('click', start);
 

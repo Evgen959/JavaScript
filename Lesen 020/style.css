@@ -1,0 +1,57 @@
+body {
+    margin: auto;
+    height: 530px;
+    width: 320px;
+    background: linear-gradient(rgb(1, 38, 63), rgb(0, 231, 220));
+    color: wheat;
+    justify-content: center;
+    text-align: center;
+    font-family: arial;
+    
+}
+
+header {   
+    font-size: 22px;
+}
+
+nav {
+    font-size: 22px;
+    font-weight: 700;
+}
+.box1 {
+    height: 300px;
+}
+h1 {
+    margin: 10px;
+    padding: 0;
+    font-weight: 50;
+    font-size: 60px;
+}
+
+.table1 {
+    height: 100px;
+}
+
+.table2 {
+    height: 300px;
+}
+
+.td1 {
+    width: 145px;
+    text-align: left;
+}
+.td2 {
+    width: 145px;
+    text-align: right;
+}
+
+footer {
+    vertical-align: bottom;
+}
+
+.list {
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 5px;
+}
